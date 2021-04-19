@@ -32,21 +32,21 @@ window.addEventListener('load', () => {
 
             // Acceder al valor de la lista 
             // mediante su indice
-            const p1 = document.createElement("p")
+            const p1 = document.createElement("h3")
             p1.innerText = tareas[index].titulo
 
             const p2 = document.createElement("p")
             p2.innerText = tareas[index].descripcion
 
             const button = document.createElement("button");
-            button.classList.add("btn", "btn-danger", "me-4")
+            button.classList.add("btn", "btn-danger", "me-3")
             button.innerText = "Borrar"
             button.dataset.id = tareas[index].id
             button.addEventListener('click', borrarTarea)
             p2.innerText = tareas[index].descripcion
 
             const button1 = document.createElement("button");
-            button1.classList.add("btn", "btn-light")
+            button1.classList.add("btn", "btn-secondary")
             button1.innerText = "Editar"
             button1.dataset.id = index
             button1.addEventListener('click', editarTarea)
